@@ -1,0 +1,28 @@
+#!/usr/bin/env -S python3 -O
+
+############################################################################
+## Docker-Info                                                            ##
+## Author: Frederic Depuydt                                               ##
+## Mail: frederic.depuydt@outlook.com                                     ##
+############################################################################
+
+## INCLUDES
+from depuydt import command, echo
+
+echo.title("DOCKER INFO")
+command.exec("docker info")
+
+echo.title("DOCKER IMAGES")
+command.exec("docker images")
+
+echo.title("DOCKER VOLUMES")
+command.exec("docker volume ls")
+
+echo.title("DOCKER NETWORKS")
+command.exec("docker network ls")
+
+echo.title("DOCKER CONTAINERS")
+command.exec("docker ps -as")
+
+echo.title("DOCKER DISK USAGE")
+command.exec("docker system df")
