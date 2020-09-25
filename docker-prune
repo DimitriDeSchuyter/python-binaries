@@ -6,6 +6,10 @@
 ############################################################################
 
 ## INCLUDES
-from depuydt.docker.deploy import Deploy
+from depuydt import command, echo
 
-Deploy()
+echo.title("DOCKER PRUNE - Removing unnecessary containers, images, volumes and networks")
+command.exec("docker container prune -f")
+command.exec("docker image prune -f")
+command.exec("docker volume prune -f")
+command.exec("docker network prune -f")

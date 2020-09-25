@@ -1,11 +1,10 @@
-#!/usr/bin/env -S python3 -O
+#!/usr/bin/env -S python3
 
 ############################################################################
 ## Author: Frederic Depuydt                                               ##
 ## Mail: frederic.depuydt@outlook.com                                     ##
 ############################################################################
 
-## INCLUDES
-from depuydt.docker.deploy import Deploy
+import pytest
 
-Deploy()
+pytest.main()
