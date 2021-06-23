@@ -6,6 +6,12 @@
 ############################################################################
 
 ## INCLUDES
+#sys.path added because name depuydt is not found otherwise.
+import sys
+import os
+path = os.popen("cd /usr/local/lib/python3.?/dist-packages/ && pwd").read().rstrip()
+sys.path.append(path + "/depuydt/src/")
+
 from depuydt.docker.deploy import Deploy
 
 Deploy()
