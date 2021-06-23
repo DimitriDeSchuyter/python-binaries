@@ -7,6 +7,11 @@
 ############################################################################
 
 ## INCLUDES
+import sys
+import os
+path = os.popen("cd /usr/local/lib/python3.?/dist-packages/ && pwd").read().rstrip()
+sys.path.append(path + "/depuydt/src/")
+
 from depuydt import command, echo
 
 echo.title("DOCKER INFO")
